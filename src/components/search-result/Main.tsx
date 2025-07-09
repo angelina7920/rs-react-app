@@ -36,8 +36,6 @@ class Main extends React.Component<object, State> {
     const url = `https://rickandmortyapi.com/api/character${query}`;
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`API error: ${response.status}`);
